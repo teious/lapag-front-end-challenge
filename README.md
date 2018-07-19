@@ -55,18 +55,18 @@ As imagens abaixo são para referência para entender o funcionamento básico da
 **Overview da Agenda**
 Nas colunas temos os profissionais, nas linhas os horários. Cada retângulo dentro da agenda refere-se a um agendamento de um cliente.
 
-![Imagem da agenda](https://www.dropbox.com/s/wtbqgwlinxwzziv/agenda.png?dl=1)
+![Imagem da agenda](https://www.dropbox.com/s/wtbqgwlinxwzziv/agenda.png?dl=0)
 
 **Overview do Agendamento**
 Esse é um agendamento em detalhes. Pedro é o cliente, e Hidratação o serviço.
 
-![Imagem do agendamento](https://www.dropbox.com/s/ush9ocumipym9t4/agendamento.png?dl=1)
+![Imagem do agendamento](https://www.dropbox.com/s/ush9ocumipym9t4/agendamento.png?dl=0)
 
 **Overview do Formulário de agendamento**
 Esse é um form para fazer um agendamento. É necessário pesquisar o cliente, escolher o profisisonal e os serviços que ele pode prestar.
 
-![Imagem do agendamento](https://www.dropbox.com/s/rbvkzkqgny1cs0p/form.png?dl=1)
+![Imagem do agendamento](https://www.dropbox.com/s/rbvkzkqgny1cs0p/form.png?dl=0)
 
 Perceba como mostramos apenas os serviços habilitados para determinado profissional
 
-![Imagem do agendamento](https://www.dropbox.com/s/h9342f9uc6t9t7c/form2.png?dl=1)
+![Imagem do agendamento](https://www.dropbox.com/s/h9342f9uc6t9t7c/form2.png?dl=0)
