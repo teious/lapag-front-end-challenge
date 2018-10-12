@@ -1,0 +1,14 @@
+.ScheduleContainer{
+    display: flex;
+    flex-direction: column;
+    .DatePickerContainer {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+    }
+}
+
+.Modal {
+    padding:  0;
+    min-width: 200px;
+}

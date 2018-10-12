@@ -1,0 +1,9 @@
+.MainContainer {
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 876px) {
+  .MainContainer {
+    padding: 0 15%;
+  }
+}

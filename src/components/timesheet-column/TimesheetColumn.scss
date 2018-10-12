@@ -1,0 +1,19 @@
+.TimesheetColumn{
+    min-width: 100px;
+    flex: 1;
+    > div:first-child{
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border: 1px solid #ccc;
+    }
+    >div{
+        height: 80px;
+        border: 1px solid #ccc;
+        >div:first-child {
+            height: 40px;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}

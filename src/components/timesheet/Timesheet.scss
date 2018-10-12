@@ -1,0 +1,23 @@
+.Timesheet {
+    display: flex;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.Hours{
+    border-collapse: collapse;
+  &::before{
+    content: '';
+    height: 40px; 
+    width: 40px;
+    display: block;
+    border: 1px solid #ccc;
+  }
+   > div {
+    height: 80px;
+    display: flex;
+    border: 1px solid #ccc;
+    justify-content:  center;
+    align-items:  center;   
+   } 
+}

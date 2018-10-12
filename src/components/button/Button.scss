@@ -1,0 +1,16 @@
+@import '../../sass/Colors';
+
+.Button {
+    cursor: pointer;
+    background: $secondary;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    color: white;
+    &:hover{
+        opacity: 0.8;
+    }
+    &:active{
+        opacity: 0.7;
+    }
+}
