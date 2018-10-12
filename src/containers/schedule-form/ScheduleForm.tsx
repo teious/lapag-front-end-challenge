@@ -1,21 +1,30 @@
 import * as React from "react";
 import { ConnectedReduxProps, AppState } from "src/store";
-import { LayoutState } from "src/store/layout/types";
 import { connect } from "react-redux";
 import { CloseModal } from "src/store/layout/actions";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import './ScheduleForm.css';
+// import { returnProfessionals } from "src/mocks/apiMocks";
+import ClientAutocomplete from "src/components/client-autocomplete/ClientAutocomplete";
 
 interface ScheduleFormProps {}
 
-interface PropsFromState {
-  layout: LayoutState;
-}
 export class ScheduleForm extends React.Component<
-  ScheduleFormProps & ConnectedReduxProps & PropsFromState
+  ScheduleFormProps & ConnectedReduxProps & Partial<AppState>
 > {
-  constructor(props: ScheduleFormProps & ConnectedReduxProps & PropsFromState) {
+  constructor(props: ScheduleFormProps & ConnectedReduxProps) {
     super(props);
     this.closeModal = this.closeModal.bind(this);
+  }
+
+  componentDidMount= async () =>{
+  //  const professionals: any[] = await returnProfessionals() as any[];
+    
+  
+  } 
+  setCustomer(){
+
   }
 
   closeModal() {
@@ -25,8 +34,18 @@ export class ScheduleForm extends React.Component<
     return (
       <div>
         <div className="ModalHeader primary-bg">
-          {" "}
-          <a onClick={this.closeModal}>X</a>
+           <div className="ModalActions">
+               <a className="CloseButton" onClick={this.closeModal}>
+                <FontAwesomeIcon icon="times-circle"/>
+               </a>
+           
+           </div>
+          <div className="ModalTitle"> Agendar</div>
+
+       
+        </div>
+        <div className="ModalContent">
+            <ClientAutocomplete onChange={this.setCustomer}/>
         </div>
       </div>
     );

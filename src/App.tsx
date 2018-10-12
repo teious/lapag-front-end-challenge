@@ -2,10 +2,17 @@ import * as React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import { Provider } from "react-redux";
-
 import Header from "./components/header/Header";
 import Schedule from "./features/schedule/Schedule";
 import store from "./store";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faTimesCircle,
+  faTrashAlt,
+  faPencilAlt
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faTimesCircle, faTrashAlt, faPencilAlt);
 
 class App extends React.Component {
   render() {
@@ -13,17 +20,16 @@ class App extends React.Component {
       <Provider store={store}>
         <Router>
           <div>
-            <Header/>
+            <Header />
             <div className="MainContainer">
-             <Route exact={true} path="/" component={Schedule} />
+              <Route exact={true} path="/" component={Schedule} />
             </div>
           </div>
         </Router>
-    
       </Provider>
     );
   }
 }
 
 export default App;
-// 
+//

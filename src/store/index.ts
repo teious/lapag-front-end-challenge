@@ -12,7 +12,8 @@ export interface AppState {
 
 export const reducers: Reducer<AppState> = combineReducers({
   layout: layoutReducer,
-  schedule: scheduleReducer
+  schedule: scheduleReducer,
+
 })
 
 export interface ConnectedReduxProps<A extends Action = AnyAction> {

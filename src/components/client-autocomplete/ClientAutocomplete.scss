@@ -1,0 +1,23 @@
+.ClientAutocomplete{
+    input {
+        height: 30px;
+        width: 100%;
+        border: 1px solid #ccc;
+        
+    }
+
+    .Clients{
+        width: 100%;
+        border: 1px solid #ccc;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        > div {
+            cursor: pointer;
+            padding: 10px;
+            &:hover {
+                background: #edf5ff
+            }
+       
+        }
+    }
+}
