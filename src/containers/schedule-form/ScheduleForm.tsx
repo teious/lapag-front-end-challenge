@@ -136,7 +136,6 @@ export class ScheduleForm extends React.Component<
     label:string;
     value: Duration
   }) {
-    console.log(duration);
     this.setState(prev => ({
       ...prev,
       newSchedule: {

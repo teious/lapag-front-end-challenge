@@ -9,10 +9,11 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faTimesCircle,
   faTrashAlt,
-  faPencilAlt
+  faUser,
+  faClock
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faTimesCircle, faTrashAlt, faPencilAlt);
+library.add(faTimesCircle, faTrashAlt, faUser, faClock);
 
 class App extends React.Component {
   render() {

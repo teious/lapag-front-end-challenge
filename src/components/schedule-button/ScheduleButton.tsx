@@ -27,7 +27,7 @@ export default class ScheduleButton extends React.Component<
         padding: "5px",
         color: "white",
         border: '1px solid white',
-        cursor: 'pointer'
+        cursor: 'pointer',
       }
     };
     this.onClick = this.onClick.bind(this);
@@ -45,10 +45,12 @@ export default class ScheduleButton extends React.Component<
       schedule.startTime.set({ hour: 8, minute: 0, second: 0 }),
       schedule.startTime.set({second: 0})
     );
+    const relativeTop = (startGap.length('minutes') * 80) / 60;
     const styles: React.CSSProperties = {
-      top: (startGap.length('minutes') * 80) / 60,
+      top: relativeTop,
       height: ((duration.minutes * 80) / 60),
-      backgroundColor: this.randomColor()
+      backgroundColor: this.randomColor(),
+      zIndex: Math.round(relativeTop)
     };
     this.setState((prev)=>({
       styles:{
@@ -62,10 +64,7 @@ export default class ScheduleButton extends React.Component<
     const { schedule } = this.props;
     return (
       <div style={styles} onClick={this.onClick}>
-        {schedule.customer.name.substring(
-          0,
-          schedule.customer.name.indexOf(" ")
-        )}
+        {schedule.customer.name.split(' ')[0]}
       </div>
     );
   }

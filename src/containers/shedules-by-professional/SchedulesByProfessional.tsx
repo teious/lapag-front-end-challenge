@@ -6,7 +6,9 @@ import { schedulesByDate, schedulesByProfessional } from "src/utils/utils";
 import { DateTime } from "luxon";
 import { Professsional, Schedule } from "src/utils/types";
 import ScheduleButton from "src/components/schedule-button/ScheduleButton";
-import { UpdateModalContent, OpenModal } from "src/store/layout/actions";
+import { UpdateModalContent, OpenModal, CloseModal } from "src/store/layout/actions";
+import { RemoveSchedule } from "src/store/schedule/actions";
+import ScheduleDetails from "src/components/schedule-details/ScheduleDetails";
 
 interface SchedulesByProfessionalProps {
   professional: Professsional;
@@ -28,6 +30,8 @@ class SchedulesByProfessional extends React.Component<
       professionalSchedules: []
     };
     this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.deleteSchedule = this.deleteSchedule.bind(this)
   }
   componentDidMount() {
     const {
@@ -76,12 +80,19 @@ class SchedulesByProfessional extends React.Component<
   }
 
   scheduleModal = (schedule: Schedule) => () => (
-    <div>{schedule.customer.name}</div>
+    <ScheduleDetails schedule={schedule} onDelete={this.deleteSchedule} onClose={this.closeModal}/>
   );
 
   openModal(schedule: Schedule) {
     this.props.dispatch(new UpdateModalContent(this.scheduleModal(schedule)));
     this.props.dispatch(new OpenModal());
+  }
+  deleteSchedule(scheduleId: string){
+    this.props.dispatch(new RemoveSchedule(scheduleId));
+    this.closeModal();
+  }
+  closeModal(){
+    this.props.dispatch(new CloseModal());
   }
   render() {
     const { professionalSchedules } = this.state;

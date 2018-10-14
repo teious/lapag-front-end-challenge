@@ -1,0 +1,21 @@
+.CustomerName {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  > :first-child {
+    margin: 15px;
+  }
+}
+.Interval {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #b0b0b0;
+    > :first-child {
+        margin-right: 5px;
+    }
+}
+.Services {
+    display: flex;
+    flex-direction: column;
+}

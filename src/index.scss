@@ -5,3 +5,45 @@ body {
   padding: 0;
   font-family: Roboto;
 }
+.ModalContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.ModalHeader {
+  display: flex;
+  flex-direction: column;
+  .ModalActions {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: flex-end;
+    > a {
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.7;
+      }
+    }
+    > a:not(:last-child){
+      margin-right: 10px;
+    }
+  }
+  .ModalTitle {
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid $secondary;
+    font-weight: 700;
+  }
+
+}
+.ModalContent {
+    padding: 15px;
+    flex: 1;
+}
