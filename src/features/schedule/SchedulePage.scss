@@ -12,4 +12,15 @@
     padding:  0;
     min-width: 100%;
     min-height: 100%;   
+    display: flex;
+}
+.Overlay {
+    padding: 0;
+}
+
+@media screen and (min-width: 400px){
+    .Modal{
+        min-width: 360px;
+        min-height: 0;
+    }
 }

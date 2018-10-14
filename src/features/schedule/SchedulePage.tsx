@@ -1,6 +1,6 @@
 import * as React from "react";
 import DatePicker from "src/components/date-picker/DatePicker";
-import "./Schedule.css";
+import "./SchedulePage.css";
 import { DateTime } from "luxon";
 import { ConnectedReduxProps, AppState } from "src/store";
 import { connect } from "react-redux";
@@ -23,7 +23,7 @@ interface SchedulePageState {
   professionals: any[];
 }
 
-export class Schedule extends React.Component<
+export class SchedulePage extends React.Component<
   SchedulePageProps,
   SchedulePageState
 > {
@@ -79,7 +79,8 @@ export class Schedule extends React.Component<
               onClose={this.closeModal}
               showCloseIcon={false}
               classNames={{
-                modal: 'Modal'
+                modal: 'Modal',
+                overlay: 'Overlay'
               }
               }
             >
@@ -99,4 +100,4 @@ const mapStateToProps = (
   layout,
   ...props
 });
-export default connect(mapStateToProps)(Schedule);
+export default connect(mapStateToProps)(SchedulePage);

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import { Provider } from "react-redux";
 import Header from "./components/header/Header";
-import Schedule from "./features/schedule/Schedule";
+import SchedulePage from "./features/schedule/SchedulePage";
 import store from "./store";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -22,7 +22,7 @@ class App extends React.Component {
           <div>
             <Header />
             <div className="MainContainer">
-              <Route exact={true} path="/" component={Schedule} />
+              <Route exact={true} path="/" component={SchedulePage} />
             </div>
           </div>
         </Router>

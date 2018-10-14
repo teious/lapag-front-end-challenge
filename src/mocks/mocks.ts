@@ -1,5 +1,6 @@
 // Use esse mock para os profissionais da LaPag
-export const professionalMocks = [
+import { Professsional, Service, Client } from "src/utils/types";
+export const professionalMocks: Professsional[] = [
   {
     _id: "4b6BEEvCCH8zAGSyY",
     name: "Ana Claudia Silveira",
@@ -51,7 +52,7 @@ export const professionalMocks = [
 ];
 
 // Use esse mock para os serviços da LaPag
-export const servicesMocks = [
+export const servicesMocks: Service[] = [
   {
     _id: "2zt6YKZZA7dCvaZjZ",
     name: "Perna Inteira",
@@ -381,7 +382,7 @@ export const servicesMocks = [
 ];
 
 // Use esse mock para os clientes da lapag
-export const clientsMocks = [
+export const clientsMocks: Client[] = [
   {
     _id: "mt5mSb5oukK6Bu3Yh",
     name: "Marcelito"
@@ -400,7 +401,7 @@ export const clientsMocks = [
   },
   {
     _id: "DqmA4RMg1WOv3QjN",
-    name: "adriana  de oliveira guanabarino santos"
+    name: "adriana de oliveira guanabarino santos"
   },
   {
     _id: "3TF52e3pK5qMr5Zc",
